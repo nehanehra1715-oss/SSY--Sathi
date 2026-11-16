@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSY Saathi | Neha</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #365c9a;
+    --dark: #263b68;
+    --gold: #f0c96a;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#f4f6ff,#e7efff,#f7f0ff);
+    color: #263248;
+    line-height: 1.65;
+}
+
+header {
+    background: white;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button, .btn {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--gold);
+    color: #302500;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 65px 7%;
+    background: linear-gradient(130deg,#263b68,#477fc1,#7b6db4);
+    color: white;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(34px,5vw,55px);
+    line-height: 1.15;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.hero-art {
+    text-align: center;
+    font-size: 90px;
+    background: #ffffff15;
+    border: 1px solid #ffffff40;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+section {
+    padding: 50px 7%;
+}
+
+h2 {
+    color: var(--green);
+    font-size: 30px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 18px;
+}
+
+.card {
+    background: rgba(255,255,255,.92);
+    border: 1px solid #dce4f5;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 5px 18px #263b6812;
+}
+
+.card h3 {
+    color: var(--green);
+}
+
+.pale {
+    background: linear-gradient(135deg,#eaf0ff,#f0eaff);
+}
+
+.stat {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.bar {
+    height: 12px;
+    background: #e7ece7;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 8px 0 18px;
+}
+
+.fill {
+    height: 100%;
+    background: var(--green);
+}
+
+.gold {
+    background: var(--gold);
+}
+
+.callout {
+    background: #fff2cc;
+    border-left: 5px solid var(--gold);
+    padding: 17px;
+    border-radius: 8px;
+}
+
+.step {
+    background: white;
+    margin: 12px 0;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+details {
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+summary {
+    cursor: pointer;
+    color: var(--green);
+    font-weight: bold;
+}
+
+footer {
+    background: linear-gradient(130deg,#263b68,#3d5f99);
+    color: white;
+    text-align: center;
+    padding: 30px 7%;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 12px;
+    border: 1px solid #ccd8ce;
+    border-radius: 8px;
+    font: inherit;
+}
+
+label {
+    font-weight: bold;
+}
+
+@media(max-width:750px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 38px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌱 SSY Saathi</div>
+
+    <nav>
+        <a href="#about" data-en="About SSY" data-hi="योजना">About SSY</a>
+        <a href="#survey" data-en="Survey" data-hi="सर्वेक्षण">Survey</a>
+        <a href="#solution" data-en="Our Solution" data-hi="समाधान">Our Solution</a>
+        <a href="#guide" data-en="Guidance" data-hi="मार्गदर्शन">Guidance</a>
+    </nav>
+
+    <button onclick="language()">हिंदी / EN</button>
+</header>
+
+<main>
+
+<div class="hero">
+    <div>
+        <p>COMMUNITY DEVELOPMENT PROJECT</p>
+
+        <h1 data-en="Small savings today, stronger opportunities tomorrow."
+            data-hi="हर बेटी का उज्ज्वल भविष्य।">
+            Small savings today, stronger opportunities tomorrow.
+        </h1>
+
+        <p data-en="Explore Sukanya Samriddhi Yojana and see how planned savings can help families prepare for a girl child's education and future goals."
+           data-hi="सुकन्या समृद्धि योजना के बारे में जानें और समझें कि नियमित बचत बालिका की शिक्षा और भविष्य के लक्ष्यों में कैसे सहायक हो सकती है।">
+            Explore Sukanya Samriddhi Yojana and see how planned savings can help families prepare for a girl child's education and future goals.
+        </p>
+
+        <a href="#survey" class="btn">Explore Our Survey ↓</a>
+    </div>
+
+    <div class="hero-art">
+        👧🏻 📚 🌱
+        <p>Awareness • Education • Savings • Empowerment</p>
+    </div>
+</div>
+
+<section id="about">
+    <div class="heading">
+        <h2>About Sukanya Samriddhi Yojana</h2>
+        <p>A government-backed savings scheme for eligible girl children.</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🎯 Purpose</h3>
+            <p>Helps families build a savings habit for an eligible girl child's future needs, such as education and other important milestones.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏦 Account Opening</h3>
+            <p>Parents or guardians can contact an authorised bank or India Post office to learn about eligibility, documents and the account-opening process.</p>
+        </div>
+
+        <div class="card">
+            <h3>📘 Official Rules</h3>
+            <p>Check official sources for the latest interest rate, deposit limits, eligibility and withdrawal conditions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="survey" class="pale">
+    <div class="heading">
+        <h2>Jhanjharola Village Survey</h2>
+        <p>Community Development Project • Feedback gathered from 37 survey forms</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="stat">37</div>
+            <h3>Survey Forms</h3>
+            <p>Responses recorded during our village visit.</p>
+        </div>
+
+        <div class="card">
+            <div class="stat">31 / 37</div>
+            <h3>Heard of SSY</h3>
+            <p>83.8% answered Yes.</p>
+        </div>
+
+        <div class="card">
+            <div class="stat">34 / 37</div>
+            <h3>Knew the Purpose</h3>
+            <p>91.9% answered Yes.</p>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+        <h3>1. Have you heard about SSY?</h3>
+        <p>Yes — 31 (83.8%)</p>
+        <div class="bar"><div class="fill" style="width:83.8%"></div></div>
+
+        <p>No — 6 (16.2%)</p>
+        <div class="bar"><div class="fill gold" style="width:16.2%"></div></div>
+
+        <hr>
+
+        <h3>2. Do you know the purpose of SSY?</h3>
+        <p>Yes — 34 (91.9%)</p>
+        <div class="bar"><div class="fill" style="width:91.9%"></div></div>
+
+        <p>No — 1 (2.7%)</p>
+        <div class="bar"><div class="fill gold" style="width:2.7%"></div></div>
+
+        <p>Partly — 2 (5.4%)</p>
+        <div class="bar"><div class="fill" style="width:5.4%;background:#86b89a"></div></div>
+
+        <hr>
+
+        <h3>3. Do you know where to open an account?</h3>
+        <p>Yes — 30</p>
+        <div class="bar"><div class="fill" style="width:81.1%"></div></div>
+
+        <p>No — 4</p>
+        <div class="bar"><div class="fill gold" style="width:10.8%"></div></div>
+
+        <p>Not sure — 2</p>
+        <div class="bar"><div class="fill" style="width:5.4%;background:#86b89a"></div></div>
+
+        <small>Note: These recorded answers total 36, although 37 forms were collected. One response is not accounted for.</small>
+    </div>
+</section>
+
+<section id="solution">
+    <div class="heading">
+        <h2>Our Digital Awareness Initiative</h2>
+        <p>Making scheme information clear, accessible and easy to understand.</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🌐 Digital Awareness</h3>
+            <p>Share simple explanations in English and Hindi so more families can understand the scheme.</p>
+        </div>
+
+        <div class="card">
+            <h3>📍 Account Guidance</h3>
+            <p>Help families find reliable guidance from official sources and authorised banks or post offices.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Survey-Based Action</h3>
+            <p>Use village survey responses to identify topics where people need clearer information.</p>
+        </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+        <strong>Expected benefit:</strong>
+        This website aims to make basic SSY information easier to understand and access. It is an educational prototype and cannot open accounts or process applications.
+    </div>
+</section>
+
+<section id="guide" class="pale">
+    <div class="heading">
+        <h2>Steps to Learn More About SSY</h2>
+        <p>Confirm the current rules with an official source before taking action.</p>
+    </div>
+
+    <div class="step">
+        <h3>1. Check Eligibility</h3>
+        <p>Check the official eligibility conditions and scheme guidelines.</p>
+    </div>
+
+    <div class="step">
+        <h3>2. Visit an Authorised Institution</h3>
+        <p>Visit an authorised bank or India Post office to ask about forms, documents and the application procedure.</p>
+    </div>
+
+    <div class="step">
+        <h3>3. Confirm the Rules</h3>
+        <p>Confirm current deposit rules, applicable interest rate and withdrawal conditions.</p>
+    </div>
+
+    <div class="card">
+        <h3>Official Websites</h3>
+        <p><a href="https://www.indiapost.gov.in/" target="_blank">India Post — Official Website ↗</a></p>
+        <p><a href="https://www.nsiindia.gov.in/" target="_blank">National Savings Institute ↗</a></p>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="heading">
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <details>
+        <summary>Who can explain the account-opening process?</summary>
+        <p>An authorised bank or India Post office can provide information about eligibility, documents and the current procedure.</p>
+    </details>
+
+    <details>
+        <summary>Why was this website created?</summary>
+        <p>It was created as a Community Development Project to share simple information about SSY and support awareness after a village survey.</p>
+    </details>
+
+    <details>
+        <summary>Is this an official government website?</summary>
+        <p>No. SSY Saathi is an educational Community Development Project website.</p>
+    </details>
+</section>
+
+<section class="pale">
+    <div class="heading">
+        <h2>Share Your Feedback</h2>
+        <p>Demonstration form for the project.</p>
+    </div>
+
+    <div class="card" style="max-width:600px;margin:auto">
+        <form onsubmit="event.preventDefault();document.getElementById('msg').textContent='Thank you for your feedback! This demo does not send or save your response.';">
+
+            <label>Was this website helpful?</label>
+
+            <select required>
+                <option value="">Choose an option</option>
+                <option>Yes</option>
+                <option>Somewhat</option>
+                <option>Needs improvement</option>
+            </select>
+
+            <label>Suggestion (optional)</label>
+
+            <textarea rows="3" placeholder="Write your suggestion..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+
+            <p id="msg" aria-live="polite"></p>
+
+            <small>This is a demonstration form. Your response is not sent or saved.</small>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div style="font-size:24px;font-weight:bold">🌱 SSY Saathi</div>
+
+    <p>Community Development Project | Sukanya Samriddhi Yojana Awareness</p>
+
+    <p><strong>Presented by: Neha</strong></p>
+
+    <p style="font-size:12px">
+        Educational project only. Not an official government website.
+    </p>
+</footer>
+
+<script>
+let lang = "en";
+
+function language() {
+    lang = lang === "en" ? "hi" : "en";
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-en]").forEach(el => {
+        const value = el.getAttribute("data-" + lang);
+
+        if (value !== null) {
+            el.textContent = value;
+        }
+    });
+}
+</script>
+
+</body>
+</html>
